@@ -16,21 +16,39 @@
   <ion-card *ngFor="let produto of produtos; let i = index">
     <ion-card-content>
       <ion-item>
-        <ion-label position="stacked">Nome do Produto</ion-label>
+        <ion-label position="stacked">Nome da Despesa:</ion-label>
         <ion-input [(ngModel)]="produto.nome"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Quantidade em Estoque</ion-label>
+        <ion-label position="stacked">Quantidade:</ion-label>
         <ion-input type="number" [(ngModel)]="produto.quantidade"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Preço por Unidade</ion-label>
+        <ion-label position="stacked">Valor:</ion-label>
         <ion-input type="number" step="0.01" [(ngModel)]="produto.preco"></ion-input>
       </ion-item>
-      <ion-button expand="full" color="danger" (click)="removerItem(i)">Remover Produto</ion-button>
+      <ion-item>
+        <ion-label position="stacked">Categoria:</ion-label>
+        <ion-input [(ngModel)]="produto.categoria"></ion-input>
+      </ion-item>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col class="ion-text-center">
+            <ion-button shape="round" color="danger" (click)="removerItem(i)">Remover Produto
+              <ion-icon slot="end" name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-card-content>
   </ion-card>
-
-  <ion-button expand="full" color="success" (click)="adicionarItem()">Adicionar Produto</ion-button>
-
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col class="ion-text-center">
+        <ion-button expand="block" shape="round" color="success" (click)="adicionarItem()">Adicionar Produto
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
