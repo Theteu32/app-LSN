@@ -3,8 +3,8 @@ import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-estoque',
-  templateUrl: 'estoque.page.html',
-  styleUrls: ['estoque.page.scss'],
+  templateUrl: 'Estoque.page.html',
+  styleUrls: ['Estoque.page.scss'],
 })
 export class EstoquePage {
   produtos: any[] = [];
